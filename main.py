@@ -37,8 +37,12 @@ test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 print("Accuracy on training data ", test_data_accuracy)
 
 #Building the predictive system
-input_data = (75, 0	, 582, 0, 20, 1, 265000, 1.9, 130, 1, 0, 4)
+input_data = (65,1,52,0,25,1,276000,1.3,137,0,0,16)
 #change input data to numpy array
 input_npArray = np.asarray(input_data)
+#reshape data
+reshapedInput = input_npArray.reshape(1,-1)
+prediction = model.predict(reshapedInput)
+print(prediction)
 
 
